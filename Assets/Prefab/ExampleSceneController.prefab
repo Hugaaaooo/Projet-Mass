@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b60ec1b1968a9439df4c3e2562463b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: -274095209493462675, guid: 71bcf8142ee9d4c49b3b45cddaad7383, type: 3}
+  fishPrefab: {fileID: 0}
   spawnBoids: 100
   boidSpeed: 10
   boidSteeringSpeed: 100

@@ -2,15 +2,40 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 
 {
+
+    public static PlayerController instance;
+
+    public int currentHealth;
+    public int maxHealth = 3;  
+
+
+
+
+
     public CharacterController characterController;
     public float speed = 6;
 
+    
+    private void Awake()
+    {
+        instance = this; 
+
+    }
+    
+    
+    
     private void Start()
     {
+        currentHealth = maxHealth;
+
+
+
+
         characterController = this.gameObject.GetComponent<CharacterController>();
     }
     void Update()
@@ -75,5 +100,18 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    public void TakeDamage(int damage)
+    {
+
+        if(currentHealth >= 0 )
+        {
+          currentHealth -= damage;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
+
+    }
+
 
 }
