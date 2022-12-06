@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class HealthSysteme : MonoBehaviour
@@ -47,7 +48,7 @@ public class HealthSysteme : MonoBehaviour
                 life3.sprite = emptyHeart;
                 life2.sprite = emptyHeart;
                 life1.sprite = emptyHeart;
-                break;
+                            break;
 
         }
 

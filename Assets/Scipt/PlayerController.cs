@@ -44,22 +44,13 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
-    private void Move()
-    {
-
-        float horizontalMove = Input.GetAxis("Horizontal");
-        float verticalMove = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
-        characterController.Move(speed * Time.deltaTime * move);
-    }
 
     //gravité 
 
     private float gravity = 9.87f;
     private float verticalSpeed = 0;
 
-    private void OnAnimatorMove()
+    private void Move()
     {
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");

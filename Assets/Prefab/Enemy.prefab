@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2088851514998680688, guid: 3d911a6363c665c4fbb91fc097f3dc8a, type: 3}
-  distanceTreshold: 50
+  distanceTreshold: 1000
   aiState: 0
 --- !u!114 &-947859010277508735
 MonoBehaviour:

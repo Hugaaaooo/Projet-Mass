@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2088851514998680693}
   - component: {fileID: 2088851514998680690}
   - component: {fileID: 2088851514998680691}
-  - component: {fileID: 1738129853004267495}
   - component: {fileID: 5506429800907155241}
   - component: {fileID: 1255838627462531311}
   m_Layer: 0
@@ -100,26 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1738129853004267495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088851515101647872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3698b84a191bc0d49887f9d3da22d676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 3
-  characterController: {fileID: 5506429800907155241}
-  speed: 600
-  cameraHolder: {fileID: 0}
-  mouseSensitivity: 2
-  upLimit: -50
-  downLimit: 50
 --- !u!143 &5506429800907155241
 CharacterController:
   m_ObjectHideFlags: 0
