@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 3;  
 
 
-
+    private Animator animator;
 
 
     public CharacterController characterController;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
 
-
+        animator = GetComponent<Animator>();
 
 
         characterController = this.gameObject.GetComponent<CharacterController>();
@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
     {
         Move();
+        
+        
     }
 
 
