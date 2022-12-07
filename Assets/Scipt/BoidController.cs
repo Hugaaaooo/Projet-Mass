@@ -17,7 +17,6 @@ public class BoidController : MonoBehaviour
 
     public void SimulateMovement(List<BoidController> other, float time)
     {
-
         //default vars
         var steering = Vector3.zero;
 
