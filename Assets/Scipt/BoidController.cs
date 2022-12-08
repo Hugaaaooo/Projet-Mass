@@ -36,7 +36,7 @@ public class BoidController : MonoBehaviour
             if (boid == this)
                 continue;
 
-            var distance = Vector3.Distance(boid.transform.position, this.transform.position);
+            var distance = Vector3.Distance(boid.transform.position, transform.position);
 
             //identify local neighbour
             if (distance < NoClumpingRadius)

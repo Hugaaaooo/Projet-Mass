@@ -1,20 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Target : MonoBehaviour
 {
     public float health;
     BoidController bc;
+    Transform deathpos;
+    public GameObject Cadavre; 
 
     private void Start()
     {
-        bc = FindObjectOfType<BoidController>();
+         
+      
     }
     void Update()
     {
+        deathpos = transform;
+
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            Instantiate(Cadavre, deathpos);
+            
         }
     }
 

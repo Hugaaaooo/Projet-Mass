@@ -88,7 +88,7 @@ public class Gun : MonoBehaviour
                 // Instantiates the round at the muzzle position
                 GameObject spawnedRound = Instantiate(
                     round,
-                    transform.position + transform.forward * muzzleOffset,
+                    transform.position + transform.forward ,
                     transform.rotation
                 );
 
