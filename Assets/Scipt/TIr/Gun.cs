@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public Animator animator;
+    PlayerController pc;
+    private void Awake()
+    {
+        pc = FindObjectOfType<PlayerController>();
+        animator = pc.GetComponent<Animator>();
+    }
     public enum ShootState
     {
         Ready,
@@ -81,7 +88,7 @@ public class Gun : MonoBehaviour
                 // Instantiates the round at the muzzle position
                 GameObject spawnedRound = Instantiate(
                     round,
-                    transform.position + transform.forward * muzzleOffset,
+                    transform.position + transform.forward ,
                     transform.rotation
                 );
 
@@ -101,10 +108,13 @@ public class Gun : MonoBehaviour
             {
                 nextShootTime = Time.time + (1 / fireRate);
                 shootState = ShootState.Shooting;
+
+
             }
             else
             {
                 Reload();
+                animator.SetBool("Shooting", false);
             }
         }
     }

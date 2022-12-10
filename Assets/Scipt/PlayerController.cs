@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerController : MonoBehaviour
 
 {
@@ -63,6 +64,8 @@ public class PlayerController : MonoBehaviour
         Vector3 gravityMove = new Vector3 (0, verticalSpeed, 0);
         Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove; 
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
+
+        animator.SetBool("IsWalking", verticalMove != 0 || horizontalMove != 0);
     }
     //systeme de camera et rotation avec la souris 
     public Transform cameraHolder; 
@@ -106,5 +109,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    
 
+   
+     
+        
 }
