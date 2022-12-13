@@ -5,11 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public void StartGame()
+    Scene ActiveScene;
+
+
+    public void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        ActiveScene = SceneManager.GetActiveScene(); 
+
+
 
     }
 
 
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(ActiveScene.buildIndex + 1);
+
+    }
+
+    public void Menue()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
