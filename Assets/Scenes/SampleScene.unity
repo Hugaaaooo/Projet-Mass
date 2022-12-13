@@ -6663,7 +6663,7 @@ PrefabInstance:
       objectReference: {fileID: -274095209493462675, guid: 71bcf8142ee9d4c49b3b45cddaad7383, type: 3}
     - target: {fileID: 8562374955576704569, guid: afe7e6d89e58e424ca1880f6498eef21, type: 3}
       propertyPath: spawnBoids
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8562374955576704569, guid: afe7e6d89e58e424ca1880f6498eef21, type: 3}
       propertyPath: boidLocalArea
@@ -9005,10 +9005,6 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 111853171}
-    - target: {fileID: 687999073, guid: bf8fe81d2ce44724895a5ecd93b0045b, type: 3}
-      propertyPath: cameraHolder
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 687999074, guid: bf8fe81d2ce44724895a5ecd93b0045b, type: 3}
       propertyPath: m_Center.y
       value: 0.89

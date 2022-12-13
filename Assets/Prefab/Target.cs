@@ -6,7 +6,7 @@ public class Target : MonoBehaviour
 {
     public float health;
     BoidController bc;
-    Transform deathpos;
+    Vector3 deathpos;
     public GameObject Cadavre; 
 
     private void Start()
@@ -16,13 +16,12 @@ public class Target : MonoBehaviour
     }
     void Update()
     {
-        deathpos = transform;
+        deathpos = transform.position;
 
         if (health <= 0)
         {
+            Instantiate(Cadavre, deathpos, Quaternion.identity);
             Destroy(this.gameObject);
-            Instantiate(Cadavre, deathpos);
-            
         }
     }
 
