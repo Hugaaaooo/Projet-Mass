@@ -67,34 +67,18 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("IsWalking", verticalMove != 0 || horizontalMove != 0);
     }
-    //systeme de camera et rotation avec la souris 
-    public Transform cameraHolder; 
-    public float mouseSensitivity = 2f;
-    public float upLimit = -50; 
-    public float downLimit = 50;
 
     private void FixedUpdate()
     {
         Move();
         Rotate(); 
-
     }
     
     public void Rotate ()
     {
         float horizontalROtation = Input.GetAxis("Mouse X");
-        float verticalRotation = Input.GetAxis("Mouse Y");
 
-        transform.Rotate(0, horizontalROtation * mouseSensitivity, 0);
-        cameraHolder.Rotate(-verticalRotation*mouseSensitivity,0,0);
-
-        Vector3 currentRotation = cameraHolder.localEulerAngles;
-        if (currentRotation.x > 180) currentRotation.x -= 360;
-        currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit);
-        cameraHolder.localRotation = Quaternion.Euler(currentRotation);
-
-
-
+        transform.Rotate(0, horizontalROtation, 0);
     }
 
     public void TakeDamage(int damage)
