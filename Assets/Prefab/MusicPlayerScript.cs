@@ -10,7 +10,7 @@ public class MusicPlayerScript : MonoBehaviour
     public AudioSource audioSource;
     public Slider slider;
 
-    private float musicVolume = 1f; 
+    private float musicVolume = 0.5f; 
 
 
     void Start()
@@ -23,6 +23,7 @@ public class MusicPlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        slider = FindObjectOfType<Slider>();
         audioSource.volume = musicVolume;
     }
 
