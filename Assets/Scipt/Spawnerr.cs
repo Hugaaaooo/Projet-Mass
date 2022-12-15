@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class Spawnerr : MonoBehaviour
 {
+
+
     public BoidController fishPrefab;
 
     public int spawnBoids = 100;
-    public float boidSpeed = 10f;
+    public static float boidSpeed = 10f;
     public float boidSteeringSpeed = 100f;
     public float boidNoClumpingArea = 2f;
     public float boidLocalArea = 10f;
@@ -17,6 +22,7 @@ public class Spawnerr : MonoBehaviour
 
     private void Start()
     {
+
         _boids = new List<BoidController>();
 
         for (int i = 0; i < spawnBoids; i++)

@@ -1453,12 +1453,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 695841892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7235b675270aa344e8b4a007625f14a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 14d2481c2a01e0548924639706b8b76f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider:
   - {fileID: 0}
-  spawn: {fileID: 0}
 --- !u!4 &727903387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400018, guid: 8f9f29f2d4e959843be91737f65b164a, type: 3}
@@ -3187,7 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  slider: {fileID: 0}
+  slider: {fileID: 431905938}
 --- !u!4 &1416268273
 Transform:
   m_ObjectHideFlags: 0

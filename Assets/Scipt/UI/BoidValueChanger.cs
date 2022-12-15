@@ -2,24 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class BoidValueChanger : MonoBehaviour
 {
-    public Slider[] slider;
-    public Spawnerr spawn;
+    public static Slider[] slider;
+
 
 
 
     private void Start()
     {
-        slider[0].value = 100;
-        spawn = FindObjectOfType<Spawnerr>();
+
+
     }
+
+    public static class SaveStuff
+    {
+        public static float optionScore;
+    }
+
 
     private void Update()
     {
-        spawn.spawnBoids = (int)slider[0].value;
+        
 
-      
+
+        SaveStuff.optionScore = slider[0].value; // saving data
+        slider[0].value = SaveStuff.optionScore; // load stuff
+
     }
 }

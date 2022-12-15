@@ -7,12 +7,16 @@ public class GameController : MonoBehaviour
 {
     public Slider[] slider;
     public Gun gun;
+    public AudioSource audioSource;
 
-
+    private float musicVolume = 0.5f;
 
     private void Start()
     {
-        slider[0].value = 1;
+        audioSource = FindObjectOfType<AudioSource>();
+        audioSource.Play();
+
+        slider[0].value = 2;
 
         slider[1].value = 12;
 
@@ -21,6 +25,8 @@ public class GameController : MonoBehaviour
         slider[3].value = 1;
 
         slider[4].value = 4;
+
+        
 
         gun = FindObjectOfType<Gun>();
     }
@@ -36,5 +42,18 @@ public class GameController : MonoBehaviour
         gun.maxRoundVariation = slider[3].value;
 
         gun.fireRate = slider[4].value;
+
+        musicVolume = slider[5].value;
+
+        audioSource.volume = musicVolume;
+
     }
+
+
+    public void updateVolume()
+    {
+        musicVolume = slider[5].value;
+
+    }
+
 }
